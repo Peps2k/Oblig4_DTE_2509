@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Velkommen{% endblock %}
+
+{% block content %}
+<h1>Velkommen til min basic flask apllikasjon</h1>
+<p>Dette er en enkel nettside laget med Flask, HTML-templates og CSS.</p>
+
+<ul>
+    <li><a href="{{ url_for('about_me') }}">Om meg</a></li>
+    <li><a href="{{ url_for('about_flask') }}">Om Flask</a></li>
+</ul>
+{% endblock %}

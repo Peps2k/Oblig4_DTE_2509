@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Min Flask-app{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}"> Main</a></li>
+            <li><a href="{{ url_for('about_me') }}">Om meg</a></li>
+            <li><a href="{{ url_for('about_flask') }}">Om Flask</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
